@@ -51,7 +51,7 @@ const config: HardhatUserConfig = {
     paths: {
       artifacts: 'build/artifacts',
       cache: 'build/cache',
-      deploy: 'src/deploy',
+      deploy: 'scripts/deploy',
       sources: 'contracts',
     },
     networks: {
@@ -63,20 +63,11 @@ const config: HardhatUserConfig = {
         hardhat: {
             allowUnlimitedContractSize: true
         },
-        sepolia: {
+        mekong:{
             ...sharedNetworkConfig,
-            url: "https://rpc.ankr.com/eth_sepolia",
-        },
-        pectra:{
-            ...sharedNetworkConfig,
-            url: "https://rpc.pectra-devnet-4.ethpandaops.io",
+            url: "https://rpc.mekong.ethpandaops.io/",
             gasPrice: 50_000_000_000,
             gas: 1_000_000_000,
-            timeout: 100000000,
-        },
-        ithaca:{
-            ...sharedNetworkConfig,
-            url: "https://odyssey.ithaca.xyz",
             timeout: 100000000,
         },
         ...customNetwork,
