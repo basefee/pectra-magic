@@ -65,10 +65,11 @@ const config: HardhatUserConfig = {
         },
         mekong:{
             ...sharedNetworkConfig,
-            url: "https://rpc.mekong.ethpandaops.io/",
+            url: "https://rpc.mekong.ethpandaops.io",
             gasPrice: 50_000_000_000,
             gas: 1_000_000_000,
-            timeout: 100000000,
+            chainId: 7078815900,
+            timeout: 1000000000000,
         },
         ...customNetwork,
     },
